@@ -1,0 +1,262 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f0f4f8;
+    /* Light gray-blue background */
+}
+
+/* Page Container */
+.diet-plan-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Card Styling */
+.diet-plan-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    /* Adjust for smaller devices */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Title Styling */
+.diet-plan-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2b2b2b;
+    border-bottom: 2px solid #0077ff;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Date Styling */
+.current-date {
+    font-size: 20px;
+    color: #2b2b2b;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #0077ff;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+/* Content Styling */
+.diet-plan-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Line Styling */
+.diet-plan-line {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444444;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+}
+
+/* Highlighted Sections */
+.highlight {
+    background-color: #e8f4ff;
+    /* Light blue background for highlights */
+    border-left: 5px solid #0077ff;
+    /* Blue border */
+    font-weight: 600;
+    padding-left: 15px;
+    color: #004a99;
+}
+
+/* Loading Message */
+.loading-message {
+    font-size: 18px;
+    color: #666666;
+    text-align: center;
+}
+
+.back-button {
+    /* background-color: #4CAF50; */
+    color: black;
+    border: none;
+    padding: 10px 20px 10px 0;
+    margin-top: 20px;
+    /* margin-left: -20x; */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 36px;
+    position: absolute;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .back-button{
+        font-size: 30px;
+    }
+    .diet-plan-card {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        /* Stack title and date */
+        align-items: center;
+    }
+
+    .diet-plan-title {
+        font-size: 22px;
+        /* Slightly smaller for mobile */
+    }
+
+    .current-date {
+        font-size: 18px;
+        /* Smaller font for mobile */
+    }
+
+    .diet-plan-line {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        font-size: 28px;
+    }
+    .diet-plan-card {
+        padding: 15px;
+    }
+
+    .diet-plan-title {
+        font-size: 20px;
+        /* Smaller for very small devices */
+    }
+
+    .current-date {
+        font-size: 16px;
+    }
+
+    .diet-plan-line {
+        font-size: 14px;
+    }
+}
+
+/* Animation for Card Entrance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.download-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Floating Chat Button */
+.floating-chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.floating-chat-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* Add to DietPlan.css */
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.upgrade-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.premium-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: gold;
+    color: black;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
